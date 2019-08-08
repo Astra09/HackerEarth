@@ -1,0 +1,55 @@
+https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/seating-arrangement-1/
+
+//C++ Code
+#include<iostream>
+using namespace std;
+int main()
+{   int N,T,ch,i;
+    cin>>T;
+    for(i=T;i>0;i--)
+    {
+        cin>>N;
+        ch=N%12;
+        switch(ch)
+        {
+        case 0: N=N-11;
+                cout<<N<<" WS";
+                break;
+        case 1: N=N+11;
+                cout<<N<<" WS";
+                break;
+        case 2: N=N+9;
+                cout<<N<<" MS";
+                break;
+        case 3: N=N+7;
+                cout<<N<<" AS";
+                break;
+        case 4: N=N+5;
+                cout<<N<<" AS";
+                break;
+        case 5: N=N+3;
+                cout<<N<<" MS";
+                break;
+        case 6: N=N+1;
+                cout<<N<<" WS";
+                break;
+        case 7: N=N-1;
+                cout<<N<<" WS";
+                break;
+        case 8: N=N-3;
+                cout<<N<<" MS";
+                break;
+        case 9: N=N-5;
+                cout<<N<<" AS";
+                break;
+        case 10: N=N-7;
+                cout<<N<<" AS";
+                break;
+        case 11: N=N-9;
+                cout<<N<<" MS";
+                break;
+        }
+        cout<<endl;
+    }
+  return 0;  
+}
