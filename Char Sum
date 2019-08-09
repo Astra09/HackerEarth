@@ -1,0 +1,11 @@
+https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/char-sum-2d3a6ab5/
+
+Code
+n=input()
+n=list(n)
+sum=0
+for i in n:
+    x=ord(i)
+    x=x%96
+    sum=sum+x
+print(sum)
