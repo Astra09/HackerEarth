@@ -1,0 +1,29 @@
+count=0
+n=list(input())
+if 'A' in n:
+    print("invalid")
+if 'E' in n:
+    print("invalid")
+if 'I' in n:
+    print("invalid")
+if 'O' in n:
+    print("invalid")
+if 'U' in n:
+    print("invalid")
+else:
+    n.remove('-')
+    n.remove(n[2])
+    for i in range(len(n)):
+        n[i]=int(n[i])
+    for i in range(0,5):
+        if((n[i]+n[i+1])%2!=0):
+            count=1
+            break
+    for i in range(6,7):
+        if((n[i-1]+n[i])%2!=0):
+            count=1
+            break
+    if(count==0):
+        print("valid")
+    else:
+      print("invalid")
