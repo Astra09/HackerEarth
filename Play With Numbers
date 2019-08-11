@@ -1,0 +1,18 @@
+https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/play-with-numbers-2/
+
+Code:
+sum=0
+N,Q=map(int,input().split(" "))
+l=[]
+n=list(input().split(" "))
+for i in range(N):
+    n[i]=int(n[i])
+for i in range(Q):
+    count=0
+    sum=0
+    L,R=map(int,input().split(" "))
+    for i in range(L-1,R):
+        sum=sum+n[i]
+        count=count+1
+    sum=sum//count
+    print(sum)
