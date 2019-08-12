@@ -1,0 +1,41 @@
+https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/two-strings-4/
+
+Code
+
+#include<iostream>
+#include<cstring>
+#include<algorithm>
+using namespace std;
+int main()
+{
+	int n,flag,i,j;
+	string n1,n2;
+	cin>>n;
+	for(i=0;i<n;i++)
+	{
+		flag=0;
+		cin>>n1>>n2;
+		if(n1.length()!=n2.length())
+		{
+			flag=1;
+			break;
+		}
+		sort(n1.begin(),n1.end());
+		sort(n2.begin(),n2.end());
+		for(j=0;j<n1.length();j++)
+		{
+			if(n1[j]!=n2[j])
+			{
+				flag=1;
+			}
+		}
+	if(flag==0)
+	cout<<"YES"<<endl;
+	else
+	cout<<"NO"<<endl;
+		
+	}
+
+	return 0;
+	
+}
