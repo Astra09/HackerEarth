@@ -1,0 +1,27 @@
+t=int(input())
+while(t>0):
+    n=int(input())
+    ls=list(map(int,input().split()))
+    cumm=0
+    curr=97
+    res=""
+    for i in range(0,len(ls)):
+        j=cumm
+        if(cumm<ls[i]):
+            cumm=ls[i]
+            while(j<cumm):
+                res+=chr(curr)
+                curr+=1
+                if(curr==123):
+                    curr=97
+                j+=1
+        elif(cumm==ls[i]):
+            res+='a'
+        elif(cumm>ls[i]):
+            res=-1
+            break
+    if(res!=-1):
+        if(len(res)!=n):
+            res=-1
+    print(res)
+    t-=1
